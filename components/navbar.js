@@ -1,8 +1,6 @@
 import clsx from "clsx";
-import { signOut } from "next-auth/react";
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
-import { useEffect } from "react";
 
 const routes = [
   { label: "abends", href: "/abends" },
@@ -23,7 +21,7 @@ const routes = [
 export default function Navbar() {
   const router = useRouter();
   return (
-    <header className="p-2 bg-gray-100">
+    <header className="p-2 bg-wedding-light">
       <nav id="nav" className="flex justify-between items-baseline">
         <ul className="flex flex-wrap gap-2">
           {routes
