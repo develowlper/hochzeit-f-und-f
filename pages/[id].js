@@ -49,9 +49,6 @@ export default function Abends({ images, title }) {
         <div className="flex gap-4 items-center">
           <h1 className="text-2xl font-bold">{title}</h1>
         </div>
-        <div>
-          <FiArrowUp className="mr-2 text-xl" />
-        </div>
       </a>
       <div className="mt-4 pb-4 md:container mx-4 md:mx-auto">
         {images.map((image) => (
@@ -85,6 +82,13 @@ export default function Abends({ images, title }) {
           </div>
         ))}
       </div>
+
+      <a
+        href="#nav"
+        className="fixed right-3 bottom-3 p-3 rounded-full bg-wedding"
+      >
+        <FiArrowUp className="text-xl" />
+      </a>
     </div>
   );
 }
