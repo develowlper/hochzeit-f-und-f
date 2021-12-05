@@ -48,12 +48,12 @@ export default function Navbar() {
               </li>
             ))}
         </ul>
-        <button
+        {/* <button
           onClick={() => signOut()}
           className="bg-white border-2 border-yellow-300 py-1 px-2"
         >
           signout
-        </button>
+        </button> */}
       </nav>
     </header>
   );
