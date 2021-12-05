@@ -15,10 +15,9 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async ({ params }) => {
   const { id } = params;
-  console.log(id);
   const images = await Promise.all(
     files
-      .filter((file) => new RegExp(id).test(file))
+      .filter((file) => new RegExp(`${id}\\b`).test(file))
       .map(async (file) => {
         const { img, css } = await getPlaiceholder(`/images/${file}`);
         return {
@@ -42,7 +41,7 @@ export const getStaticProps = async ({ params }) => {
 
 export default function Abends({ images, title }) {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-wedding-light">
       <a
         href="#nav"
         className="flex items-center justify-between py-2 px-4 bg-wedding opacity-90 sticky top-0 left-0 z-10"
