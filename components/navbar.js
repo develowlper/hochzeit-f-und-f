@@ -22,10 +22,9 @@ const routes = [
 
 export default function Navbar() {
   const router = useRouter();
-  console.log(router.asPath);
   return (
     <header className="p-2 bg-gray-100">
-      <nav className="flex justify-between items-baseline">
+      <nav id="nav" className="flex justify-between items-baseline">
         <ul className="flex flex-wrap gap-2">
           {routes
             .map((link) => ({ ...link, isActive: router.asPath === link.href }))

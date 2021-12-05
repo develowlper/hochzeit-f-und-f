@@ -2,6 +2,7 @@ import { SessionProvider } from "next-auth/react";
 
 import Layout from "components/layout";
 
+import "styles/global.css";
 import "tailwindcss/tailwind.css";
 import Auth from "components/auth";
 import Head from "components/head";
