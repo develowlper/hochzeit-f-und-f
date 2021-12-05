@@ -38,8 +38,12 @@ export default function Signin() {
     <div className="h-screen grid place-items-center p-4">
       <form
         onSubmit={formik.handleSubmit}
-        className="w-full flex gap-4 flex-col bg-green-50 p-2"
+        className="w-full flex gap-4 flex-col bg-green-50 p-2 md:w-1/2"
       >
+        <p className="my-2">
+          Ihr solltet von F&F eine Karte bekommen haben. Auf dieser findet ihr
+          ein Passwort, welches ihr hier eingeben müsst.
+        </p>
         <div className="flex flex-col gap-1">
           <label className="text-sm" id="password-label" htmlFor="password">
             Passwort
