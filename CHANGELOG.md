@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.2.0...v1.2.1) (2021-12-05)
+
+
+### Bug Fixes
+
+* redirect after login ([6e8ab0d](https://github.com/develowlper/hochzeit-f-und-f/commit/6e8ab0d3ef67397ed1d1b074748ebb5f8bf195af))
+* removed arrow ([614e1ac](https://github.com/develowlper/hochzeit-f-und-f/commit/614e1ac81cf7a099d830f1bd62afb1899a645bca))
+
 ## [1.2.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.1.1...v1.2.0) (2021-12-05)
 
 
