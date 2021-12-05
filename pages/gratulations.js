@@ -3,7 +3,6 @@ import { getPlaiceholder } from "plaiceholder";
 import files from "data/files";
 import { nanoid } from "nanoid";
 import { BlurhashCanvas } from "react-blurhash";
-import { DownloadAllButton } from "components/buttons";
 
 export const getStaticProps = async () => {
   const images = await Promise.all(
@@ -32,9 +31,7 @@ export default function Gratulations({ images }) {
       <div className="flex items-center justify-between py-2 px-4 bg-green-50 opacity-90 sticky top-0 left-0 z-10">
         <div className="flex gap-4 items-center">
           <h1 className="text-2xl font-bold">Gratulations</h1>
-          <DownloadAllButton path="gratulations" label="gratulations" />
         </div>
-        <DownloadAllButton path="photos" />
       </div>
       <div className="mt-4 pb-4 md:container mx-4 md:mx-auto">
         {images.map((image) => (
