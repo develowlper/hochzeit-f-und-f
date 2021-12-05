@@ -8,6 +8,10 @@ module.exports = {
       serif: ["Merriweather", "serif"],
     },
     extend: {
+      colors: {
+        wedding: { light: "#D8E9E4", DEFAULT: "#acd1c6", dark: "#50917D" },
+        error: "#A61C3C",
+      },
       keyframes: {
         fadeIn: {
           from: {

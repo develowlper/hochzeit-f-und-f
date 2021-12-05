@@ -34,9 +34,10 @@ export default function Navbar() {
               <li
                 key={label}
                 className={clsx(
-                  isActive ? "bg-green-300" : "bg-white",
+                  isActive ? "bg-wedding-dark text-white" : "bg-white",
+                  "rounded-lg",
                   "border-2",
-                  "border-green-300",
+                  "border-wedding-dark",
                   "py-1",
                   "px-2",
                   "transition"

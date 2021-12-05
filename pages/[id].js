@@ -42,7 +42,7 @@ export const getStaticProps = async ({ params }) => {
 export default function Abends({ images, title }) {
   return (
     <div className="bg-gray-100">
-      <div className="flex items-center justify-between py-2 px-4 bg-green-50 opacity-90 sticky top-0 left-0 z-10">
+      <div className="flex items-center justify-between py-2 px-4 bg-wedding opacity-90 sticky top-0 left-0 z-10">
         <div className="flex gap-4 items-center">
           <h1 className="text-2xl font-bold">{title}</h1>
         </div>

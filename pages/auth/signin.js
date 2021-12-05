@@ -58,12 +58,12 @@ export default function Signin() {
             onChange={formik.handleChange}
           />
           {formik.touched.password && formik.errors.password && (
-            <label className="text-xs text-red-500">
+            <label className="text-xs text-error">
               {formik.errors.password}
             </label>
           )}
           {formik.touched.password && error && (
-            <label className="text-xs text-red-500">
+            <label className="text-xs text-error">
               Das Passwort stimmt leider nicht.
             </label>
           )}
