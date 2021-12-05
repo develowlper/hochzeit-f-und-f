@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.2.1...v1.2.2) (2021-12-05)
+
+
+### Bug Fixes
+
+* sign in flow ([60fafdc](https://github.com/develowlper/hochzeit-f-und-f/commit/60fafdc9ff620ae11a3ede5d85e678ca562c2aa1))
+
 ### [1.2.1](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.2.0...v1.2.1) (2021-12-05)
 
 
