@@ -2,7 +2,6 @@ import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
 import files from "data/files";
 import { nanoid } from "nanoid";
-import { BlurhashCanvas } from "react-blurhash";
 import readSubfolders from "utils/readSubfolders";
 
 export async function getStaticPaths() {
@@ -20,11 +19,11 @@ export const getStaticProps = async ({ params }) => {
     files
       .filter((file) => new RegExp(id).test(file))
       .map(async (file) => {
-        const { img, blurhash } = await getPlaiceholder(`/images/${file}`);
+        const { img, css } = await getPlaiceholder(`/images/${file}`);
         return {
           id: nanoid(),
           img,
-          blurhash,
+          css,
           href: `/images/${file}`,
         };
       })
@@ -54,11 +53,26 @@ export default function Abends({ images, title }) {
             key={image.id}
             className="shadow-lg mb-4 bg-white animate-fadeIn md:w-2/3 lg:w-1/2 mx-auto p-2"
           >
-            <div className="relative block overflow-hidden">
-              <BlurhashCanvas
-                className="absolute top-0 right-0 bottom-0 left-0 w-full h-full"
-                {...image.blurhash}
-                punch={1}
+            <div
+              style={{
+                position: "relative",
+                display: "block",
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  right: 0,
+                  bottom: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  transform: "scale(1.5)",
+                  filter: "blur(40px)",
+                  ...image.css,
+                }}
               />
               <Image {...image.img} sizes="100% " layout="responsive" />
             </div>
