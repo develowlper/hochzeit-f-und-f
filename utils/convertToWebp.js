@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const webp = require("webp-converter");
 const dir = "../public/images";
-const fileTypes = [".jpg", ".jpeg"];
+const fileTypes = [".webp"];
 (async function main() {
   const filesToReturn = [];
 
@@ -15,7 +15,7 @@ const fileTypes = [".jpg", ".jpeg"];
         fs.statSync(curFile).isFile() &&
         fileTypes.indexOf(path.extname(curFile)) != -1
       ) {
-        filesToReturn.push(curFile);
+        filesToReturn.push(curFile.replace(`${dir}/`, ""));
       } else if (fs.statSync(curFile).isDirectory()) {
         walkDir(curFile);
       }
@@ -32,5 +32,10 @@ const fileTypes = [".jpg", ".jpeg"];
   //   )
   // );
   console.log(filesToReturn);
-  await Promise.all(filesToReturn.map((path) => fs.unlinkSync(path)));
+  fs.writeFileSync(
+    "../data/files.js",
+    `const files = ${JSON.stringify(filesToReturn)}; export default files;`
+  );
+
+  //  await Promise.all(filesToReturn.map((path) => fs.unlinkSync(path)));
 })();

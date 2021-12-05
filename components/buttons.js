@@ -6,7 +6,7 @@ export const DownloadAllButton = ({ path, label = "all" }) => {
     <a
       className="flex border-2 px-2 py-2 border-green-300 justify-center items-center "
       download
-      href={`/images/${path}.zip`}
+      href={`/zips/${path}.zip`}
     >
       <FiArrowDown className="mr-2" />
 
