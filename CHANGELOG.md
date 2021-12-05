@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.1.1...v1.2.0) (2021-12-05)
+
+
+### Features
+
+* colors scheme ([df2f5fb](https://github.com/develowlper/hochzeit-f-und-f/commit/df2f5fbfaeaf13a8027c294954e68d57f41e9d2c))
+
+
+### Bug Fixes
+
+* buggy images ([a2b47fe](https://github.com/develowlper/hochzeit-f-und-f/commit/a2b47fea52d7602f76ad37a687bf05149f22ace5))
+* remove home link ([59787ab](https://github.com/develowlper/hochzeit-f-und-f/commit/59787ab22ab0c60ca6c8794093f00ca2b7e5a77c))
+* smooth scrolling ([60872ee](https://github.com/develowlper/hochzeit-f-und-f/commit/60872eed66b6eaa626a348317ef30ddb9a350f7f))
+
 ### [1.1.1](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.1.0...v1.1.1) (2021-12-05)
 
 
