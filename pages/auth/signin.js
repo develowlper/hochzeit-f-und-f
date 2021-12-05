@@ -35,10 +35,10 @@ export default function Signin() {
   });
 
   return (
-    <div className="h-screen grid place-items-center p-4">
+    <div className="h-screen grid place-items-center p-4 bg-wedding-light">
       <form
         onSubmit={formik.handleSubmit}
-        className="w-full flex gap-4 flex-col bg-green-50 p-2 md:w-1/2"
+        className="w-full flex gap-4 flex-col bg-wedding p-2 md:w-1/2"
       >
         <p className="my-2">
           Ihr solltet von F&F eine Karte bekommen haben. Auf dieser findet ihr
@@ -51,7 +51,7 @@ export default function Signin() {
           <input
             value={formik.values.password}
             autoFocus
-            className="shadow-md py-1 px-2 text-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent"
+            className="shadow-md py-1 px-2 text-lg border focus:outline-none focus:ring-2 focus:ring-wedding-dark focus:border-transparent"
             type="text"
             name="password"
             id="password"

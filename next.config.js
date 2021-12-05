@@ -1,4 +1,12 @@
 const { withPlaiceholder } = require("@plaiceholder/next");
 module.exports = withPlaiceholder({
-  // your Next.js config
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/ankunft",
+        permanent: true,
+      },
+    ];
+  },
 });
