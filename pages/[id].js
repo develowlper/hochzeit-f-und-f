@@ -3,11 +3,22 @@ import { getPlaiceholder } from "plaiceholder";
 import files from "data/files";
 import { nanoid } from "nanoid";
 import { BlurhashCanvas } from "react-blurhash";
+import readSubfolders from "utils/readSubfolders";
 
-export const getStaticProps = async () => {
+export async function getStaticPaths() {
+  const paths = await readSubfolders("./public/images/");
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export const getStaticProps = async ({ params }) => {
+  const { id } = params;
+  console.log(id);
   const images = await Promise.all(
     files
-      .filter((file) => /trauung/.test(file))
+      .filter((file) => new RegExp(id).test(file))
       .map(async (file) => {
         const { img, blurhash } = await getPlaiceholder(`/images/${file}`);
         return {
@@ -21,16 +32,20 @@ export const getStaticProps = async () => {
   return {
     props: {
       images,
+      title: id
+        .split("-")
+        .map((word) => word.replace(/^\w/, (c) => c.toUpperCase()))
+        .join(" "),
     },
   };
 };
 
-export default function Trauung({ images }) {
+export default function Abends({ images, title }) {
   return (
     <div className="bg-gray-100">
       <div className="flex items-center justify-between py-2 px-4 bg-green-50 opacity-90 sticky top-0 left-0 z-10">
         <div className="flex gap-4 items-center">
-          <h1 className="text-2xl font-bold">Trauung</h1>
+          <h1 className="text-2xl font-bold">{title}</h1>
         </div>
       </div>
       <div className="mt-4 pb-4 md:container mx-4 md:mx-auto">
