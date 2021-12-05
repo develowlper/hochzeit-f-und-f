@@ -1,5 +1,7 @@
 {
   "private": true,
+  "version": "1.0.0-alpha.0",
+  "name": "hochzeit-f-und-f",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -37,6 +39,5 @@
     "standard-version": "^9.3.2",
     "tailwindcss": "^2.2.4",
     "webp-converter": "^2.3.3"
-  },
-  "version": null
+  }
 }
