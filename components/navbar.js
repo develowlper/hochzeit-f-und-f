@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 const routes = [
-  { label: "home", href: "/" },
   { label: "abends", href: "/abends" },
   { label: "ankunft", href: "/ankunft" },
   { label: "first-look-papa", href: "/first-look-papa" },
