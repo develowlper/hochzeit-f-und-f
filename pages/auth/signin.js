@@ -29,7 +29,7 @@ export default function Signin() {
         });
       }
       if (res.status === 200) {
-        router.push(callbackUrl ?? "/");
+        router.push(callbackUrl ?? "/ankunft");
       }
     },
   });
