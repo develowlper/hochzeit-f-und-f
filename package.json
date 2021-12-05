@@ -4,7 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest test"
+    "test": "jest test",
+    "release": "standard-version"
   },
   "dependencies": {
     "@plaiceholder/next": "^2.2.0",
@@ -33,7 +34,9 @@
     "jest": "27.3.1",
     "postcss": "^8.3.5",
     "react-test-renderer": "17.0.2",
+    "standard-version": "^9.3.2",
     "tailwindcss": "^2.2.4",
     "webp-converter": "^2.3.3"
-  }
+  },
+  "version": null
 }
