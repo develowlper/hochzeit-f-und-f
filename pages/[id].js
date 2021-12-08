@@ -79,6 +79,12 @@ export default function Abends({ images, title }) {
               />
               <Image {...image.img} sizes="100% " layout="responsive" />
             </div>
+            <a
+              href={`/api/image?key=${image.href.replace(/\/images\//, "")}`}
+              download
+            >
+              DOWNLOAD
+            </a>
           </div>
         ))}
       </div>
