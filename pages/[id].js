@@ -4,6 +4,9 @@ import files from "data/files";
 import { nanoid } from "nanoid";
 import readSubfolders from "utils/readSubfolders";
 import { FiArrowUp } from "react-icons/fi";
+import { Button } from "components/buttons";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { download } from "utils/download";
 
 export async function getStaticPaths() {
   const paths = await readSubfolders("./public/images/");
@@ -14,6 +17,8 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params }) => {
+  const cdn = process.env.SPACES_CDN;
+  const bucket = process.env.SPACES_BUCKET;
   const { id } = params;
   const images = await Promise.all(
     files
@@ -31,6 +36,8 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       images,
+      cdn,
+      bucket,
       title: id
         .split("-")
         .map((word) => word.replace(/^\w/, (c) => c.toUpperCase()))
@@ -39,7 +46,16 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export default function Abends({ images, title }) {
+export default function Abends({ images, title, cdn, bucket }) {
+  const handleDownload = useCallback(async (key) => {
+    const res = await fetch(`api/image?key=${key}`).then((res) => res.json());
+    const { protocol, pathname, search } = new URL(res.link);
+    const blob = await fetch(
+      `${protocol}//${bucket}.${cdn}${pathname}${search}`
+    ).then((res) => res.blob());
+    download(URL.createObjectURL(blob), key);
+  }, []);
+
   return (
     <div className="bg-wedding-light">
       <a
@@ -79,12 +95,15 @@ export default function Abends({ images, title }) {
               />
               <Image {...image.img} sizes="100% " layout="responsive" />
             </div>
-            <a
-              href={`/api/image?key=${image.href.replace(/\/images\//, "")}`}
-              download
+            <Button
+              onClick={() =>
+                handleDownload(
+                  image.href.replace(/\/images\//, "").replace(/.webp/, ".jpg")
+                )
+              }
             >
-              DOWNLOAD
-            </a>
+              Download
+            </Button>
           </div>
         ))}
       </div>
