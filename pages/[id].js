@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 import readSubfolders from "utils/readSubfolders";
 import { FiArrowUp } from "react-icons/fi";
 import { Button } from "components/buttons";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback } from "react";
 import { download } from "utils/download";
 
 export async function getStaticPaths() {
@@ -62,7 +62,13 @@ export default function Abends({ images, title, cdn, bucket }) {
         href="#nav"
         className="flex items-center justify-between py-2 px-4 bg-wedding opacity-90 sticky top-0 left-0 z-10"
       >
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-2 items-center">
+          <img
+            className="rounded-full"
+            width={36}
+            height={36}
+            src="/assets/V1-mit-Logo-1.png"
+          />
           <h1 className="text-2xl font-bold">{title}</h1>
         </div>
       </a>

@@ -3,19 +3,19 @@ import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 
 const routes = [
-  { label: "ankunft", href: "/ankunft" },
-  { label: "getting-ready-franz", href: "/getting-ready-franz" },
-  { label: "getting-ready-franzi", href: "/getting-ready-franzi" },
-  { label: "first-look-papa", href: "/first-look-papa" },
-  { href: "/vor-der-trauung", label: "vor-der-trauung" },
-  { href: "/trauung", label: "trauung" },
-  { href: "/spalier", label: "spalier" },
-  { label: "gratulations", href: "/gratulations" },
-  { href: "/nachmittags", label: "nachmittags" },
-  { href: "/gruppenbilder", label: "gruppenbilder" },
-  { href: "/paarbilder", label: "paarbilder" },
-  { label: "abends", href: "/abends" },
-  { href: "/hochzeitstanz-&-party", label: "hochzeitstanz-&-party" },
+  { label: "Ankunft", href: "/ankunft" },
+  { label: "Getting Ready Franz", href: "/getting-ready-franz" },
+  { label: "Getting Ready Franzi", href: "/getting-ready-franzi" },
+  { label: "First Look Papa", href: "/first-look-papa" },
+  { href: "/vor-der-trauung", label: "Vor der Trauung" },
+  { href: "/trauung", label: "Trauung" },
+  { href: "/spalier", label: "Spalier" },
+  { label: "Gratulations", href: "/gratulations" },
+  { href: "/nachmittags", label: "Nachmittags" },
+  { href: "/gruppenbilder", label: "Gruppenbilder" },
+  { href: "/paarbilder", label: "Paarbilder" },
+  { label: "Abends", href: "/abends" },
+  { href: "/hochzeitstanz-&-party", label: "Hochzeitstanz & Party" },
 ];
 
 export default function Navbar() {
