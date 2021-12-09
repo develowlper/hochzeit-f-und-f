@@ -3,19 +3,19 @@ import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 
 const routes = [
-  { label: "abends", href: "/abends" },
   { label: "ankunft", href: "/ankunft" },
-  { label: "first-look-papa", href: "/first-look-papa" },
   { label: "getting-ready-franz", href: "/getting-ready-franz" },
   { label: "getting-ready-franzi", href: "/getting-ready-franzi" },
-  { label: "gratulations", href: "/gratulations" },
-  { href: "/gruppenbilder", label: "gruppenbilder" },
-  { href: "/hochzeitstanz-&-party", label: "hochzeitstanz-&-party" },
-  { href: "/nachmittags", label: "nachmittags" },
-  { href: "/paarbilder", label: "paarbilder" },
-  { href: "/spalier", label: "spalier" },
-  { href: "/trauung", label: "trauung" },
+  { label: "first-look-papa", href: "/first-look-papa" },
   { href: "/vor-der-trauung", label: "vor-der-trauung" },
+  { href: "/trauung", label: "trauung" },
+  { href: "/spalier", label: "spalier" },
+  { label: "gratulations", href: "/gratulations" },
+  { href: "/nachmittags", label: "nachmittags" },
+  { href: "/gruppenbilder", label: "gruppenbilder" },
+  { href: "/paarbilder", label: "paarbilder" },
+  { label: "abends", href: "/abends" },
+  { href: "/hochzeitstanz-&-party", label: "hochzeitstanz-&-party" },
 ];
 
 export default function Navbar() {
