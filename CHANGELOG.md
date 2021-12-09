@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.2.2...v1.3.0) (2021-12-09)
+
+
+### Features
+
+* api route for image link ([3677340](https://github.com/develowlper/hochzeit-f-und-f/commit/3677340f513c19d197a81efba9fea3f289719d72))
+* image download ([086562e](https://github.com/develowlper/hochzeit-f-und-f/commit/086562e74486118f5eb7eb80c2bca884d11820b8))
+* working 3 client ([08a557a](https://github.com/develowlper/hochzeit-f-und-f/commit/08a557a6da3390aaddc8e5253c29cb114f1903f8))
+
 ### [1.2.2](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.2.1...v1.2.2) (2021-12-05)
 
 
