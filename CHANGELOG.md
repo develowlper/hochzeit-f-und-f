@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.3.0...v1.4.0) (2021-12-09)
+
+
+### Features
+
+* custom font ([4350944](https://github.com/develowlper/hochzeit-f-und-f/commit/435094490922904981869267230f3045412f0be2))
+* icon stuff ([bff780e](https://github.com/develowlper/hochzeit-f-und-f/commit/bff780e6fdb20de0cd5f3d50eca2001b72af6345))
+* styled loading ([6a9783f](https://github.com/develowlper/hochzeit-f-und-f/commit/6a9783f223f71bf8d84b1be3bfa420e2669f8a89))
+
+
+### Bug Fixes
+
+* image in next image component ([489b26d](https://github.com/develowlper/hochzeit-f-und-f/commit/489b26d72fbb799a9e1f7b6e9917f22f9dc37187))
+* order nav ([1fda0be](https://github.com/develowlper/hochzeit-f-und-f/commit/1fda0be25b8f8c92572e1a66e01d32a1f5e88696))
+
 ## [1.3.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.2.2...v1.3.0) (2021-12-09)
 
 
