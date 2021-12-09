@@ -1,5 +1,7 @@
 import { signIn, useSession } from "next-auth/react";
 import { useEffect } from "react";
+import Image from "next/image";
+import logo from "../public/assets/V1-mit-Logo-1.png";
 
 export default function Auth({ children }) {
   const { data: session, status } = useSession();
@@ -19,5 +21,9 @@ export default function Auth({ children }) {
 
   // Session is being fetched, or no user.
   // If no user, useEffect() will redirect.
-  return <div>Loading...</div>;
+  return (
+    <div className="h-screen bg-wedding-light flex items-center justify-center">
+      <Image className="rounded-full animate-fadeIn" src={logo} />
+    </div>
+  );
 }
