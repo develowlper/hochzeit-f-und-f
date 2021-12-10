@@ -79,39 +79,24 @@ export default function Abends({ images, title, cdn, bucket }) {
             key={image.id}
             className="shadow-lg mb-4 bg-white animate-fadeIn md:w-2/3 lg:w-1/2 mx-auto p-2"
           >
-            <div
-              style={{
-                position: "relative",
-                display: "block",
-                overflow: "hidden",
-              }}
-            >
+            <div className="relative block overflow-hidden">
               <div
+                className="absolute top-0 left-0 w-full h-full right-0 bottom-0 scale-150 blur-2xl"
                 style={{
-                  position: "absolute",
-                  top: 0,
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  transform: "scale(1.5)",
-                  filter: "blur(40px)",
                   ...image.css,
                 }}
               />
-              <Image
-                onClick={() =>
-                  handleDownload(
-                    image.href
-                      .replace(/\/images\//, "")
-                      .replace(/.webp/, ".jpg")
-                  )
-                }
-                {...image.img}
-                sizes="100% "
-                layout="responsive"
-              />
+              <Image {...image.img} sizes="100% " layout="responsive" />
+              <div
+                className="absolute top-0 left-0 w-full h-full right-0 bottom-0 bg-gray-50/50"
+                // onClick={() =>
+                //   handleDownload(
+                //     image.href
+                //       .replace(/\/images\//, "")
+                //       .replace(/.webp/, ".jpg")
+                //   )
+                // }
+              ></div>
             </div>
           </div>
         ))}
