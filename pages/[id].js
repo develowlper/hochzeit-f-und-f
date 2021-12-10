@@ -4,7 +4,7 @@ import { getPlaiceholder } from "plaiceholder";
 import files from "data/files";
 import { nanoid } from "nanoid";
 import readSubfolders from "utils/readSubfolders";
-import { FiArrowDown, FiArrowUp } from "react-icons/fi";
+import { FiArrowDown, FiArrowUp, FiSave } from "react-icons/fi";
 import { useCallback } from "react";
 import { download } from "utils/download";
 
@@ -50,6 +50,7 @@ export default function Abends({ images, title, cdn, bucket }) {
   const [isLoading, setIsLoading] = useState([]);
 
   const handleDownload = useCallback(async (e, key) => {
+    console.log("downloading...");
     setIsLoading((old) => [...old, key]);
     const res = await fetch(`api/image?key=${key}`).then((res) => res.json());
     const { protocol, pathname, search } = new URL(res.link);
@@ -98,23 +99,27 @@ export default function Abends({ images, title, cdn, bucket }) {
                 <Image {...image.img} sizes="100% " layout="responsive" />
                 <div
                   tabIndex={0}
-                  className="transition-opacity absolute top-0 left-0 w-full h-full right-0 bottom-0 opacity-0 flex focus:opacity-100  md:hover:opacity-100  bg-wedding-dark/50 items-center justify-center"
+                  className="group transition-opacity absolute top-0 left-0 w-full h-full right-0 bottom-0 opacity-0 flex focus:opacity-100  md:hover:opacity-100  bg-wedding-dark/50 items-center justify-center"
                 >
-                  <button
-                    className={`flex flex-col gap-1 align-middle pointer-events-none peer-focus-within:pointer-events-auto`}
-                    onClick={(e) => handleDownload(e, key)}
-                  >
+                  <div className={`flex flex-col align-middle`}>
                     <span
-                      className={`flex justify-center text-6xl text-white p-1 ${
+                      className={`flex justify-center text-4xl text-white p-1 animate-bounce ${
                         isLoading.some((x) => x === key) && "animate-ping"
                       }`}
                     >
                       <FiArrowDown />
                     </span>
-                    <div className="text-white">
-                      Click nochmal und das Foto fliegt zu dir.
-                    </div>
-                  </button>
+                    <button
+                      disabled={isLoading.some((x) => x === key)}
+                      onClick={(e) => handleDownload(e, key)}
+                      className={` flex gap-1 items-center justify-center pointer-events-none group-hover:pointer-events-auto group-focus:pointer-events-auto focus:pointer-events-auto px-2 py-1 border-2 rounded-md border-white text-white transition-opacity duration-500 ${
+                        isLoading.some((x) => x === key) && "opacity-0"
+                      }`}
+                    >
+                      <FiSave className="text-lg" />
+                      Speichern
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
