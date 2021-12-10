@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.4.0...v1.5.0) (2021-12-10)
+
+
+### Features
+
+* download ([42863b9](https://github.com/develowlper/hochzeit-f-und-f/commit/42863b9cfb7448d754875d3ee945ef5fc0ea86fe))
+* rotating loading screen ([8e311f2](https://github.com/develowlper/hochzeit-f-und-f/commit/8e311f2c7bf8efe8b50a37b25dbad6db6b5b913e))
+* social media preview ([c871e5a](https://github.com/develowlper/hochzeit-f-und-f/commit/c871e5ab45302a9dc042d6f218ae748a0abe1faa))
+* tailwind v3 upgrade ([a14d5a1](https://github.com/develowlper/hochzeit-f-und-f/commit/a14d5a1d9bc3f83a166ef5c6b415406990b5ebba))
+
+
+### Bug Fixes
+
+* missing robots txt ([c0f6f0e](https://github.com/develowlper/hochzeit-f-und-f/commit/c0f6f0e540474c67204d4a5e65f9c23bebff5e09))
+
 ## [1.4.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.3.0...v1.4.0) (2021-12-09)
 
 
