@@ -1,7 +1,9 @@
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     fontFamily: {
       sans: ["Proza Libre", "sans-serif"],
@@ -38,9 +40,6 @@ module.exports = {
         rotate: "rotate 3s linear infinite",
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
