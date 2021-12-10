@@ -23,7 +23,10 @@ export default function Auth({ children }) {
   // If no user, useEffect() will redirect.
   return (
     <div className="h-screen bg-wedding-light flex items-center justify-center">
-      <Image className="rounded-full animate-fadeIn" src={logo} />
+      <Image
+        className="rounded-full animate-fadeIn animate-rotate"
+        src={logo}
+      />
     </div>
   );
 }
