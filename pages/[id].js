@@ -100,17 +100,19 @@ export default function Abends({ images, title, cdn, bucket }) {
                   ...image.css,
                 }}
               />
-              <Image {...image.img} sizes="100% " layout="responsive" />
+              <Image
+                onClick={() =>
+                  handleDownload(
+                    image.href
+                      .replace(/\/images\//, "")
+                      .replace(/.webp/, ".jpg")
+                  )
+                }
+                {...image.img}
+                sizes="100% "
+                layout="responsive"
+              />
             </div>
-            <Button
-              onClick={() =>
-                handleDownload(
-                  image.href.replace(/\/images\//, "").replace(/.webp/, ".jpg")
-                )
-              }
-            >
-              Download
-            </Button>
           </div>
         ))}
       </div>
