@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Video() {
   return (
-    <div className="h-max bg-wedding-light">
+    <div className="h-full bg-wedding-light">
       <a
         href="#nav"
         className="flex items-center justify-between py-2 px-4 bg-wedding opacity-90 sticky top-0 left-0 z-10"
