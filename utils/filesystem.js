@@ -12,7 +12,5 @@ module.exports.readFilesFromFolder = async function readFilesFromFolder(
   source
 ) {
   const files = await readdir(source, { withFileTypes: true });
-
-  console.log(files);
   return files.filter((dir) => !dir.isDirectory()).map((dir) => `${dir.name}`);
 };
