@@ -16,6 +16,7 @@ const routes = [
   { href: "/paarbilder", label: "Paarbilder" },
   { label: "Abends", href: "/abends" },
   { href: "/hochzeitstanz-&-party", label: "Hochzeitstanz & Party" },
+  { href: "/scheune", label: "Scheune" },
   { href: "/video", label: "Video" },
 ];
 

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
-import files from "data/files";
+
 import { nanoid } from "nanoid";
-import readSubfolders from "utils/readSubfolders";
 import { FiArrowDown, FiArrowUp, FiSave } from "react-icons/fi";
 import { useCallback } from "react";
 import { download } from "utils/download";
+import { readFilesFromFolder, readSubfolders } from "utils/filesystem";
 
 export async function getStaticPaths() {
   const paths = await readSubfolders("./public/images/");
@@ -20,18 +20,18 @@ export const getStaticProps = async ({ params }) => {
   const cdn = process.env.SPACES_CDN;
   const bucket = process.env.SPACES_BUCKET;
   const { id } = params;
+  const files = await readFilesFromFolder(`./public/images/${id}`);
+
   const images = await Promise.all(
-    files
-      .filter((file) => new RegExp(`${id}\\b`).test(file))
-      .map(async (file) => {
-        const { img, css } = await getPlaiceholder(`/images/${file}`);
-        return {
-          id: nanoid(),
-          img,
-          css,
-          href: `/images/${file}`,
-        };
-      })
+    files.map(async (file) => {
+      const { img, css } = await getPlaiceholder(`/images/${id}/${file}`);
+      return {
+        id: nanoid(),
+        img,
+        css,
+        href: `/images/${file}`,
+      };
+    })
   );
   return {
     props: {
