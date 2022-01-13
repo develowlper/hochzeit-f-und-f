@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.6.0...v1.7.0) (2022-01-13)
+
+
+### Features
+
+* scheune pics ([2cfe0bf](https://github.com/develowlper/hochzeit-f-und-f/commit/2cfe0bfb1cbe948d0fd632c57893852dcf85c106))
+
 ## [1.6.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.5.0...v1.6.0) (2021-12-11)
 
 
