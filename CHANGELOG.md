@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.7.0...v1.8.0) (2022-01-13)
+
+
+### Features
+
+* video from space ([7e1cac7](https://github.com/develowlper/hochzeit-f-und-f/commit/7e1cac78b374b5b4cb489ff75b838b0d10ba4bc9))
+
 ## [1.7.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.6.0...v1.7.0) (2022-01-13)
 
 
