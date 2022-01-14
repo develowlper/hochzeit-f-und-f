@@ -19,7 +19,7 @@ export default function Video() {
         </div>
       </a>
       <div className="flex justify-center items-center mt-4 px-4 pb-4">
-        <div className="p-2 bg-white shadow-lg max-w-[75%]">
+        <div className="p-2 bg-white shadow-lg lg:max-w-[75%]">
           <video
             className="lg:hidden"
             width={960}
