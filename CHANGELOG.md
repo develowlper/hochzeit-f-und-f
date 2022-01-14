@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.8.0...v1.8.1) (2022-01-14)
+
+
+### Bug Fixes
+
+* video size not scalable ([d6b94e2](https://github.com/develowlper/hochzeit-f-und-f/commit/d6b94e296ebdf57bf6cfe0aea842725eeb0f9aa7))
+
 ## [1.8.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.7.0...v1.8.0) (2022-01-13)
 
 
