@@ -18,11 +18,19 @@ export default function Video() {
           <h1 className="text-2xl font-bold">Video</h1>
         </div>
       </a>
-      <div className="flex justify-center items-center mt-4">
+      <div className="flex justify-center items-center mt-4 px-4 pb-4">
         <div className="p-2 bg-white shadow-lg">
           <video
-            width={640}
-            height={360}
+            className="lg:hidden"
+            width={960}
+            height={540}
+            controls
+            src="https://hochzeit-f-und-f.fra1.cdn.digitaloceanspaces.com/video/franzi_&_franz%20%28540p%29.mp4"
+          />
+          <video
+            className="hidden lg:block"
+            width={960}
+            height={540}
             controls
             src="https://hochzeit-f-und-f.fra1.cdn.digitaloceanspaces.com/video/franzi_&_franz%20%28540p%29.mp4"
           />
