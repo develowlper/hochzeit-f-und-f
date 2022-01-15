@@ -29,7 +29,7 @@ export const getStaticProps = async ({ params }) => {
         id: nanoid(),
         img,
         css,
-        href: `/images/${file}`,
+        href: `/images/${id}/${file}`,
       };
     })
   );
