@@ -32,7 +32,7 @@ export default function Video() {
             width={1920}
             height={1080}
             controls
-            src="https://hochzeit-f-und-f.fra1.cdn.digitaloceanspaces.com/video/franzi_&_franz%20%28540p%29.mp4"
+            src="https://hochzeit-f-und-f.fra1.cdn.digitaloceanspaces.com/video/franzi_&_franz%20%281080p%29.mp4"
           />
         </div>
       </div>
