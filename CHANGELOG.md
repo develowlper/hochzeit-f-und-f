@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.4](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.8.3...v1.8.4) (2022-01-15)
+
+
+### Bug Fixes
+
+* broken downlaod links ([fe1b9b4](https://github.com/develowlper/hochzeit-f-und-f/commit/fe1b9b41d37fb079bd23179fdf6db52613266db4))
+* video link ([94a6498](https://github.com/develowlper/hochzeit-f-und-f/commit/94a6498b4a24cdb4fd2080e4578c8a073fa29a9b))
+
 ### [1.8.3](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.8.2...v1.8.3) (2022-01-14)
 
 
