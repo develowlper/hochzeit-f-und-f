@@ -6,6 +6,7 @@ import "styles/global.css";
 import "tailwindcss/tailwind.css";
 import Auth from "components/auth";
 import Head from "components/head";
+import PlausibleProvider from "next-plausible";
 
 export default function App({
   Component,
@@ -15,15 +16,17 @@ export default function App({
     <>
       <Head />
       <SessionProvider {...session}>
-        {Component.anon ? (
-          <Component {...pageProps} />
-        ) : (
-          <Auth>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </Auth>
-        )}
+        <PlausibleProvider domain="baerenfamilie.wedding">
+          {Component.anon ? (
+            <Component {...pageProps} />
+          ) : (
+            <Auth>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </Auth>
+          )}
+        </PlausibleProvider>
       </SessionProvider>
     </>
   );

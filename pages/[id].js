@@ -7,6 +7,7 @@ import { FiArrowDown, FiArrowUp, FiSave } from "react-icons/fi";
 import { useCallback } from "react";
 import { download } from "utils/download";
 import { readFilesFromFolder, readSubfolders } from "utils/filesystem";
+import { usePlausible } from "next-plausible";
 
 export async function getStaticPaths() {
   const paths = await readSubfolders("./public/images/");
@@ -48,6 +49,7 @@ export const getStaticProps = async ({ params }) => {
 
 export default function Abends({ images, title, cdn, bucket }) {
   const [isLoading, setIsLoading] = useState([]);
+  const plausible = usePlausible();
 
   const handleDownload = useCallback(async (e, key) => {
     console.log("downloading...");
@@ -59,6 +61,11 @@ export default function Abends({ images, title, cdn, bucket }) {
     ).then((res) => res.blob());
     download(URL.createObjectURL(blob), key);
     e.target.blur();
+    plausible("downloadImage", {
+      props: {
+        image: "key",
+      },
+    });
     setIsLoading((old) => old.filter((k) => k !== key));
   }, []);
 
