@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.8.4...v1.9.0) (2022-02-27)
+
+
+### Features
+
+* anlytics ([9d5966b](https://github.com/develowlper/hochzeit-f-und-f/commit/9d5966b59a9cf1f810950940c32e0bd693cb78c3))
+
 ### [1.8.4](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.8.3...v1.8.4) (2022-01-15)
 
 
