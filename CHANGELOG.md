@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.4](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.9.3...v1.9.4) (2023-11-20)
+
+
+### Bug Fixes
+
+* linitign errors ([4c2d947](https://github.com/develowlper/hochzeit-f-und-f/commit/4c2d94771bffff23120b5fb14acd2c7c9ab07d10))
+
 ### [1.9.3](https://github.com/develowlper/hochzeit-f-und-f/compare/v1.9.2...v1.9.3) (2023-11-20)
 
 

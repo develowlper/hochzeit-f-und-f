@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.9.3",
+  "version": "1.9.4",
   "name": "hochzeit-f-und-f",
   "scripts": {
     "dev": "next dev",
