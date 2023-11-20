@@ -19,6 +19,8 @@
     }
   ],
   "rules": {
-    "jsx-a11y/alt-text": 0
+    "jsx-a11y/alt-text": 0,
+    "@next/next/no-page-custom-font": 0,
+    "react/jsx-no-target-blank": 0
   }
 }

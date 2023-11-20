@@ -67,7 +67,7 @@ export default function Abends({ images, title, cdn, bucket }) {
       },
     });
     setIsLoading((old) => old.filter((k) => k !== key));
-  }, []);
+  }, [bucket, cdn , plausible]);
 
   return (
     <div className="bg-wedding-light">
